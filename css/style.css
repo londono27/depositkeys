@@ -1,0 +1,153 @@
+:root {
+  --background: #e2c51f;
+  --black: #141414;
+  --white: #fff;
+  --fuchsia: #f9008e;
+  --green: #2bfd86;
+
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  background-color: var(--background);
+  margin: 0;
+  height: 100vh;
+  align-items: center;
+}
+h1{
+  font-family: "Secular One", sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+}
+h2{
+  font-family: "Secular One", sans-serif;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: lighter;
+}
+span{
+  font-weight: lighter;
+  font-size: 3rem;
+}
+
+p{
+  font-family: "Secular One", sans-serif;
+  font-size: 20px;
+}
+.logo {
+  display: flex;
+  justify-items: center;
+  margin-top: 25px;
+  flex-direction: column;
+}
+img{
+  width: 130px;
+  height: 130px;
+}
+.info {
+  padding: 1rem 2rem;
+  font-family: "Secular One", sans-serif;
+  font-size: 2rem;
+  text-align: right;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3% auto;
+  width: 50%;
+  padding: 2rem 0;
+  border: #0059ff33 solid 2px;
+  border-radius: 10px;
+  background-color: var(--black);
+}
+
+input {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+  border-radius: 20px;
+  font-size: 1.5rem;
+}
+label{
+  color: var(--white);
+  font-size: 1rem;
+  align-items: center;
+  font-family: "Secular One", sans-serif;
+
+}
+
+form > div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  align-items: baseline;
+}
+
+form> div > label {
+
+  margin: 1rem auto;
+  color: var(--white);
+  font-family: "Secular One", sans-serif;
+  font-size: 2rem;
+}
+
+.btn {
+  color: white;
+  background-color: var(--fuchsia);
+  border-radius: 10px;
+  font-family: "Secular One", sans-serif;
+  font-size: 25px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  color: var(--fuchsia);
+  background-color: white;
+  border: none;
+}
+
+#btn-add {
+  background-color: var(--fuchsia);
+  border: none;
+  color: #fff;
+  padding: 7px 10px;
+  margin: .5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font: bold 1vw sans-serif;
+}
+#btn-add:hover{
+  color: var(--fuchsia);
+  background-color: white;
+  border: none;
+}
+
+#btn-ver {
+  background-color: var(--fuchsia);
+  border: none;
+  color: #fff;
+  margin-left: .4rem;
+  padding: .6vw .5rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font: bold 1vw sans-serif;
+}
+#btn-ver:hover{
+  color: var(--fuchsia);
+  background-color: white;
+  border: none;
+}
+.input-error {
+  border: 1px solid #ff0000;
+}
