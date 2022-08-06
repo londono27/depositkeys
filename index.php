@@ -19,7 +19,7 @@ if (isset($_SESSION['usuario'])) {
       $_SESSION['idusuario'] = $result['id'];
       $_SESSION['email'] = $result['email'];
       $_SESSION['login'] = true;
-      header('Location: /keys.php');
+      header('Location: keys.php');
       exit();
     } else {
       echo 'Usuario o contraseña incorrectos';

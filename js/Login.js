@@ -1,4 +1,4 @@
-document.getElementById("signup").addEventListener("dblclick", (e) => {
+document.getElementById("signup").addEventListener("click", (e) => {
   window.open("Signup.php", "_self");
 });
 
