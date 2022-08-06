@@ -11,7 +11,7 @@ document.getElementById("btn-ver").addEventListener("click", (e) => {
     $user = e.target.closest("form").user;
   if ($user.value !== "") {
     if (reg.test(email)) {
-      fetch("verify.php", {
+      fetch("Verify.php", {
         method: "POST",
         body: JSON.stringify({
           code,
