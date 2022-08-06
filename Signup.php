@@ -11,7 +11,7 @@ if ($_POST) {
     $PDO = new PDO('mysql:host=sql10.freesqldatabase.com;dbname=sql10511022', 'sql10511022', 'iWKPN2MgW1');
     $result = $PDO->prepare("insert into `users` (`username`, `email`, `pass`) values (:username, :email, :password)");
     $result->execute(array(':username' => $username, ':email' => $email, ':password' => $password));
-    header('Location: Login.php');
+    header('Location: index.php');
   } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
   }
