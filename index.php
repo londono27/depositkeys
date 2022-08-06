@@ -1,7 +1,7 @@
 <?php
 if (isset($_SESSION['usuario'])) {
   if ($_SESSION['login']) {
-    header('Location: keys.php');
+    header('Location: Keys.php');
     exit();
   }
 } else {
@@ -19,7 +19,7 @@ if (isset($_SESSION['usuario'])) {
       $_SESSION['idusuario'] = $result['id'];
       $_SESSION['email'] = $result['email'];
       $_SESSION['login'] = true;
-      header('Location: keys.php');
+      header('Location: Keys.php');
       exit();
     } else {
       echo 'Usuario o contraseña incorrectos';
