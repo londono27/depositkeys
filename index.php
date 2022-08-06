@@ -45,7 +45,7 @@ if (isset($_SESSION['usuario'])) {
   <h1>Deposit<span>Keys</span></h1>
   </div>
 
-  <form action="Login.php" method="post">
+  <form action="index.php" method="post">
     <div class="fila">
       <label for="usuario">Nombre de usuario: </label>
       <input type="text" name="user" id="usuario">
