@@ -8,7 +8,7 @@ if ($_POST) {
   $password = $_POST['q'];
 
   try {
-    $PDO = new PDO('mysql:host=localhost;dbname=Data', 'root', '');
+    $PDO = new PDO('mysql:host=sql10.freesqldatabase.com;dbname=sql10511022', 'sql10511022', 'iWKPN2MgW1');
     $result = $PDO->prepare("insert into `users` (`username`, `email`, `pass`) values (:username, :email, :password)");
     $result->execute(array(':username' => $username, ':email' => $email, ':password' => $password));
     header('Location: Login.php');

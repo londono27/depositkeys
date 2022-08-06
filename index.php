@@ -8,7 +8,7 @@ if (isset($_SESSION['usuario'])) {
   if ($_POST) {
     $user = $_POST['user'];
     $pass = $_POST['q'];
-    $PDO = new PDO('mysql:host=localhost;dbname=Data', 'root', '');
+    $PDO = new PDO('mysql:host=sql10.freesqldatabase.com;dbname=sql10511022', 'sql10511022', 'iWKPN2MgW1');
     $result = $PDO->prepare("select id, email from `users` where username = :user and pass = :pass");
     $result->execute(array(':user' => $user, ':pass' => $pass));
     $result->setFetchMode(PDO::FETCH_ASSOC);
@@ -26,6 +26,7 @@ if (isset($_SESSION['usuario'])) {
     }
   }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
