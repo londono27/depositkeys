@@ -18,7 +18,7 @@ try {
   $fecha = date('Y-m-d H:i:s.m');
   $clave = password_hash($key, PASSWORD_DEFAULT);
 
-  $PDO = new PDO('mysql:host=localhost;dbname=id19376564_depositkeys', 'id19376564_000depositkeys', 'm@GAAM%kwOs>D+>7');
+  $PDO = new PDO('mysql:host=sql10.freesqldatabase.com;dbname=sql10512547', 'sql10512547', 'W8PvTUG888');
   $result = $PDO->prepare("insert into `token` (val, fecha, duracion, id_user) values (:clave, :fecha, :duracion, :id)");
   $result->execute(array(':clave' => $clave, ':fecha' => $fecha, ':duracion' => $duracion, ':id' => $id));
   echo 'Clave creada correctamente';

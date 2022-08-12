@@ -6,7 +6,7 @@ if ($key != '') {
   //$key = $_post['key'];
   if (strlen($key) != 0) {
     $passwordHash = password_hash($key, PASSWORD_DEFAULT);
-    $PDO = new PDO('mysql:host=localhost;dbname=id19376564_depositkeys', 'id19376564_000depositkeys', 'm@GAAM%kwOs>D+>7');
+    $PDO = new PDO('mysql:host=sql10.freesqldatabase.com;dbname=sql10512547', 'sql10512547', 'W8PvTUG888');
     $result = $PDO->prepare("select val, fecha, duracion from `token`");
     $result->execute();
     $result = $result->fetchAll();
