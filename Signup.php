@@ -8,7 +8,7 @@ if ($_POST) {
   $password = $_POST['q'];
 
   try {
-    $PDO = new PDO('mysql:host=sql10.freesqldatabase.com;dbname=sql10511022', 'sql10511022', 'iWKPN2MgW1');
+    $PDO = new PDO('mysql:host=localhost;dbname=id19376564_depositkeys', 'id19376564_000depositkeys', 'm@GAAM%kwOs>D+>7');
     $result = $PDO->prepare("insert into `users` (`username`, `email`, `pass`) values (:username, :email, :password)");
     $result->execute(array(':username' => $username, ':email' => $email, ':password' => $password));
     header('Location: index.php');
@@ -30,36 +30,40 @@ if ($_POST) {
 </head>
 
 <body>
-<div class="logo">
-  <img src="img/door-lock.png">
-  <h1>Deposit<span>Keys</span></h1>
+  <div class="logo">
+    <img src="img/door-lock.png">
+    <h1>Deposit<span>Keys</span></h1>
   </div>
   <form action="Signup.php" method="post">
-    <div class="fila">
-      <label for="usuario">Nombre de usuario: </label>
-      <input type="text" name="user" id="usuario">
-    </div>
-    <div class="fila">
-      <label for="email">Email: </label>
-      <div style="display: flex; align-items: center">
-        <input type="text" name="email" id="email">
-        <input type="button" value="Verificar" id="btn-ver">
+    <div class="login">
+      <div class="fila">
+        <label for="usuario">Nombre de usuario: </label>
+        <input type="text" name="user" id="usuario">
       </div>
+      <div class="fila">
+        <label for="email">Email: </label>
+        <div style="display: flex; align-items: center">
+          <input type="text" name="email" id="email">
+          <input type="button" value="Verificar" id="btn-ver">
+        </div>
+      </div>
+      <div class="fila">
+        <label for="pass">Contraseña: </label>
+        <input type="password" name="pass" id="pass">
+      </div>
+      <div class="fila">
+        <label for="conf">Confirmar contraseña: </label>
+        <input type="password" name="conf" id="conf">
+        <input type="hidden" name="q">
+      </div>
+      <div class="fila">
+        <label for="verify">Verificación: </label>
+        <input type="text" name="verify" id="verify" maxlength="5">
+      </div>
+      <input type="submit" class='btn' value="Aceptar">
+
     </div>
-    <div class="fila">
-      <label for="pass">Contraseña: </label>
-      <input type="password" name="pass" id="pass">
-    </div>
-    <div class="fila">
-      <label for="conf">Confirmar contraseña: </label>
-      <input type="password" name="conf" id="conf">
-      <input type="hidden" name="q">
-    </div>
-    <div class="fila">
-      <label for="verify">Verificación: </label>
-      <input type="text" name="verify" id="verify" maxlength="5">
-    </div>
-    <input type="submit" class='btn' value="Aceptar">
+
   </form>
   <script src="js/Signup.js"></script>
 </body>

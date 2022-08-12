@@ -1,4 +1,5 @@
 <?php
+$errores = [];
 if (isset($_SESSION['usuario'])) {
   if ($_SESSION['login']) {
     header('Location: Keys.php');
@@ -8,7 +9,7 @@ if (isset($_SESSION['usuario'])) {
   if ($_POST) {
     $user = $_POST['user'];
     $pass = $_POST['q'];
-    $PDO = new PDO('mysql:host=sql10.freesqldatabase.com;dbname=sql10511022', 'sql10511022', 'iWKPN2MgW1');
+    $PDO = new PDO('mysql:host=localhost;dbname=id19376564_depositkeys', 'id19376564_000depositkeys', 'm@GAAM%kwOs>D+>7');
     $result = $PDO->prepare("select id, email from `users` where username = :user and pass = :pass");
     $result->execute(array(':user' => $user, ':pass' => $pass));
     $result->setFetchMode(PDO::FETCH_ASSOC);
@@ -22,7 +23,7 @@ if (isset($_SESSION['usuario'])) {
       header('Location: Keys.php');
       exit();
     } else {
-      echo 'Usuario o contraseña incorrectos';
+      $errores[] = 'El password es incorrecto';
     }
   }
 }
@@ -30,6 +31,7 @@ if (isset($_SESSION['usuario'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,24 +44,31 @@ if (isset($_SESSION['usuario'])) {
 
 <body>
   <div class="logo">
-  <img src="img/door-lock.png">
-  <h1>Deposit<span>Keys</span></h1>
+    <img src="img/door-lock.png">
+    <h1>Deposit<span>Keys</span></h1>
   </div>
 
   <form action="index.php" method="post">
-    <div class="fila">
-      <label for="usuario">Nombre de usuario: </label>
-      <input type="text" name="user" id="usuario">
+    <div class="login">
+      <div class="fila">
+        <label for="usuario">Nombre de usuario: </label>
+        <input type="text" name="user" id="usuario">
+      </div>
+      <div class="fila">
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass" id="pass">
+        <input type="hidden" name="q">
+      </div>
+      <div>
+        <input type="submit" class='btn' value="Aceptar">
+        <h2 class="btn" id="signup">Registrarse</h2>
+      </div>
     </div>
-    <div class="fila">
-      <label for="pass">Contraseña:</label>
-      <input type="password" name="pass" id="pass">
-      <input type="hidden" name="q">
-    </div>
-    <div>
-      <input type="submit" class='btn' value="Aceptar">
-      <h2 class="btn" id="signup">Registrarse</h2>
-    </div>
+    <?php foreach ($errores as $error) : ?>
+      <div class="alerta">
+        <?php echo $error; ?>
+      </div>
+    <?php endforeach; ?>
   </form>
   <script src="js/Login.js"></script>
 </body>
