@@ -43,11 +43,13 @@ if (isset($_SESSION['usuario'])) {
 </head>
 
 <body>
+
   <div class="logo">
-    <img src="img/door-lock.png">
+    <a class="logo" href="index.php">
+      <img src="img/door-lock.png">
+    </a>
     <h1>Deposit<span>Keys</span></h1>
   </div>
-
   <form action="index.php" method="post">
     <div class="login">
       <div class="fila">

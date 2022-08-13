@@ -26,8 +26,11 @@ if (isset($_POST)) {
 </head>
 
 <body>
-  <div class="logo">
-    <img src="img/door-lock.png">
+
+<div class="logo">
+    <a class="logo" href="index.php">
+      <img src="img/door-lock.png">
+    </a>
     <h1>Deposit<span>Keys</span></h1>
   </div>
   <form action="NewKey.php" method="post">

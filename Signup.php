@@ -30,8 +30,11 @@ if ($_POST) {
 </head>
 
 <body>
-  <div class="logo">
-    <img src="img/door-lock.png">
+
+<div class="logo">
+    <a class="logo" href="index.php">
+      <img src="img/door-lock.png">
+    </a>
     <h1>Deposit<span>Keys</span></h1>
   </div>
   <form action="Signup.php" method="post">
@@ -57,13 +60,12 @@ if ($_POST) {
         <input type="hidden" name="q">
       </div>
       <div class="fila">
-        <label for="verify">Verificación: </label>
+        <label for="verify">cod verificacion Email: </label>
         <input type="text" name="verify" id="verify" maxlength="5">
       </div>
       <input type="submit" class='btn' value="Aceptar">
 
     </div>
-
   </form>
   <script src="js/Signup.js"></script>
 </body>

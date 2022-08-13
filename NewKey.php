@@ -21,7 +21,7 @@ try {
   $PDO = new PDO('mysql:host=sql10.freesqldatabase.com;dbname=sql10512547', 'sql10512547', 'W8PvTUG888');
   $result = $PDO->prepare("insert into `token` (val, fecha, duracion, id_user) values (:clave, :fecha, :duracion, :id)");
   $result->execute(array(':clave' => $clave, ':fecha' => $fecha, ':duracion' => $duracion, ':id' => $id));
-  echo 'Clave creada correctamente';
+  header('Location: Creada.php');
 
   //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
   $mail->isSMTP();                                      // Set mailer to use SMTP
