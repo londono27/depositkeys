@@ -56,9 +56,6 @@ img {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 3% auto;
   width: 50%;
   padding: 2rem 0;
@@ -74,6 +71,7 @@ input {
   cursor: pointer;
   border-radius: 20px;
   font-size: 1.5rem;
+  width: calc(100% - 40px);
 }
 label {
   color: var(--white);
@@ -87,7 +85,7 @@ label {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1rem;
-  align-items: baseline;
+  align-items:center
 }
 label {
   margin: 1rem auto;
@@ -106,6 +104,7 @@ label {
   margin-top: 20px;
   border: none;
   cursor: pointer;
+  width: auto;
 }
 .btn:hover {
   color: var(--fuchsia);
@@ -162,7 +161,6 @@ label {
   .login > div  {
     display: grid;
     grid-template-columns: 1fr;
-
     padding: 1rem;
   }
 }
