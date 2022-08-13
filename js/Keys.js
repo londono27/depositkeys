@@ -19,5 +19,5 @@ document.addEventListener("click", (e) => {
 });
 
 document.getElementById("user").addEventListener("dblclick", (e) => {
-  window.open("logout.php", "_self");
+  window.open("Logout.php", "_self");
 });
