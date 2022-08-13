@@ -163,6 +163,9 @@ label {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
+  form {
+    margin: 3% auto;
+    width: 90%;
 }
 a {
   text-decoration: none;
