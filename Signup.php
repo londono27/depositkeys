@@ -31,7 +31,7 @@ if ($_POST) {
 
 <body>
 
-<div class="logo">
+  <div class="logo">
     <a class="logo" href="index.php">
       <img src="img/door-lock.png">
     </a>
@@ -47,8 +47,9 @@ if ($_POST) {
         <label for="email">Email: </label>
         <div style="display: flex; align-items: center">
           <input type="text" name="email" id="email">
-          <input type="button" value="Verificar" id="btn-ver">
+
         </div>
+        <input type="button" value="Verificar" id="btn-ver" class="btn">
       </div>
       <div class="fila">
         <label for="pass">Contraseña: </label>
